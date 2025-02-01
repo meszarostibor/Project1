@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "91b5aeKhInY=",
+  "dgSpecHash": "cL8Qv1yfffw=",
   "success": true,
-  "projectFilePath": "D:\\Suli\\2Ev\\IKT Projektmunka\\Project1\\AutotraderApi\\AutotraderApi\\AutotraderApi.csproj",
+  "projectFilePath": "D:\\SULI\\IKT_PROJEKTMUNKA\\Project1\\AutotraderApi\\AutotraderApi\\AutotraderApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mesza\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\mesza\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
