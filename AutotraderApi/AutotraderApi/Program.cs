@@ -7,6 +7,25 @@ namespace AutotraderApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+            builder.Services.AddCors(options =>
+            {
+
+                options.AddPolicy(MyAllowSpecificOrigins,
+                                      policy =>
+                                      {
+                                          policy.WithOrigins("http://localhost:3000",
+                                                             "http://localhost:3000")
+                                                                .AllowAnyHeader()
+                                                                .AllowAnyMethod();
+                                      });
+            });
+
+            // A végére mehet ez
+
+         
+
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -27,6 +46,7 @@ namespace AutotraderApi
 
             app.UseAuthorization();
 
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.MapControllers();
 
