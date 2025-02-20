@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import AddNewCar from './components/AddNewCar';
+import GetAllCars from './components/cards/GetAllCars';
 
 function App() {
   return (
-    <div className="App">
-  
+    <div className="container">
+      <AddNewCar />
+      <GetAllCars />
     </div>
   );
 }
