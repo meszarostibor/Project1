@@ -1,4 +1,8 @@
 
+using AutotraderApi.Models;
+using Microsoft.EntityFrameworkCore;
+using MySqlX.XDevAPI;
+
 namespace AutotraderApi
 {
     public class Program
@@ -6,6 +10,12 @@ namespace AutotraderApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<AutotraderContext>(options =>
+            {
+                var connectionString = builder.Configuration.GetConnectionString("MySQL");
+                options.UseMySQL(connectionString);
+            }
+            );//regisztrálom auz osztálytaminek a példányosítása a builder feladata
 
             var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
