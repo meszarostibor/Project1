@@ -1,0 +1,10 @@
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\appsettings.Development.json
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\appsettings.json
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\AutotraderApi.pdb
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\aspnetcorev2_inprocess.dll
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\comerr64.dll
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\gssapi64.dll
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\k5sprt64.dll
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\krb5_64.dll
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\krbcc64.dll
+D:\SULI\IKT_PROJEKTMUNKA\Project1\AutotraderApi\AutotraderApi\bin\Release\net8.0\win-x64\publish\AutotraderApi.exe

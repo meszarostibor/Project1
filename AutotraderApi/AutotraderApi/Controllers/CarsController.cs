@@ -2,6 +2,7 @@
 using AutotraderApi.Models.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AutotraderApi.Controllers
 {
@@ -18,7 +19,7 @@ namespace AutotraderApi.Controllers
         }
         
         [HttpDelete("carbyid")]
-        public ActionResult DeleteCar(Guid id)
+        public async Task<ActionResult> DeleteCar(Guid id)
         {
            // using (var context = new AutotraderContext())
            // {
@@ -26,7 +27,7 @@ namespace AutotraderApi.Controllers
                 {
                     Car car = new Car { Id = id };
                     _context.Cars.Remove(car);
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
                     return StatusCode(200, new { result = car, message = "Sikeres törlés" });
                 }
                 catch (Exception ex)
@@ -38,7 +39,7 @@ namespace AutotraderApi.Controllers
 
 
         [HttpPost]
-        public ActionResult AddNewCar(CreateCarDto createCarDto)
+        public async Task<ActionResult> AddNewCar(CreateCarDto createCarDto)
         {
 
             var car = new Car
@@ -54,8 +55,8 @@ namespace AutotraderApi.Controllers
             //{
                 try
                 {
-                    _context.Cars.Add(car);
-                    _context.SaveChanges();
+                    await _context.Cars.AddAsync(car);
+                    await _context.SaveChangesAsync();
                     return StatusCode(201, new { result = car, message = "Sikeres felvétel" });
                 }
                 catch (Exception ex)
@@ -66,7 +67,7 @@ namespace AutotraderApi.Controllers
         }
 
         [HttpPut("carbyid")]
-        public ActionResult UpdateCarById(Guid id, UpdateCarDto updateCarDto)
+        public async Task<ActionResult> UpdateCarById(Guid id, UpdateCarDto updateCarDto)
         {
             //using (var context = new AutotraderContext())
            //{
@@ -80,7 +81,7 @@ namespace AutotraderApi.Controllers
                     car.Myear = updateCarDto.Myear;
                     car.UpdatedTime = DateTime.Now;
                     _context.Cars.Update(car);
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
                     return StatusCode(200, new { result = car, message = "Sikeres módosítás" });
                 }
                 catch (Exception ex)
