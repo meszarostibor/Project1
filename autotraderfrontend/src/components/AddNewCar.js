@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function AddNewCar() {
+export default function AddNewCar(props) {
 
   const [carData, setCardata] = useState(
     {
@@ -34,7 +34,8 @@ export default function AddNewCar() {
     }
 
     const response = await request.json()
-
+    props.handleCount()
+    console.log(response.message)
   }
 
   return (
